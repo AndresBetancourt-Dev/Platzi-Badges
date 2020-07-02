@@ -12,7 +12,8 @@ container.appendChild(element);
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import BadgeNew from './pages/BadgeNew';
+//import BadgeNew from './pages/BadgeNew';
+import Badges from './pages/Badges'
 import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -31,4 +32,4 @@ const container = document.getElementById('app');
 //ReactDOM.render() permits me to append content inside something
 //ReactDOM.render('what','where');
 //In this case it's element being appended to it's container
-ReactDOM.render(<BadgeNew/>, container);
+ReactDOM.render(<Badges/>, container);

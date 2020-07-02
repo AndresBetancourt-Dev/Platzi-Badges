@@ -1,7 +1,10 @@
 import React from 'react';
 import './styles/Navbar.css';
 import logo from '../images/logo.svg'
-
+/*
+Simple undestandable component that it's pure HTML, except by the src at the image
+it recieves a variable logo as source
+*/
 class Navbar extends React.Component{
     render(){
         return(
