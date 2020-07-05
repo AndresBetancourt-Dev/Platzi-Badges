@@ -12,7 +12,7 @@ class Badge extends React.Component{
             //It's because i already used the reserved word class when creating my React Component
             <div className="Badge">
                 <div className="Badge__header">
-                    <img src={confLogo} alt="Platzi Background" /> 
+                    <img src={confLogo} alt="Logo de la Conferencia" /> 
                 </div>
 
                 <div className="Badge__section-name">

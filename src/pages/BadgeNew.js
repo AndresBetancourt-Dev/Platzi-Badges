@@ -40,7 +40,7 @@ class BadgeNew extends React.Component{
         return(
             <div>
             <Navbar/>
-            <div className="BadgeNew__hero">
+            <div className="BadgeNew__hero d-flex justify-content-center">
                 <img className="img-fluid" alt="Logo" src={logo}/>
             </div>
             <div className="container">
