@@ -6,7 +6,6 @@
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
     "client": "react-scripts start",
-    "server": "json-server --port 3001 --watch server/db.json",
     "seed": "node server/seed.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -14,22 +13,13 @@
   },
   "dependencies": {
     "all": "0.0.0",
-    "bootstrap": "^4.5.0",
     "express": "^4.17.1",
-    "jquery": "^3.5.1",
     "mongoose": "^5.9.22",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.4",
-    "popper.js": "^1.16.1",
-    "react": "16.8.3",
-    "react-dom": "16.8.3",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "2.1.5"
+    "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "faker": "^4.1.0",
-    "json-server": "^0.14.2",
-    "npm-run-all": "^4.1.5"
+    "nodemon": "^2.0.4"
   },
   "eslintConfig": {
     "extends": "react-app"
