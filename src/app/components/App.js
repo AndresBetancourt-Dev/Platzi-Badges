@@ -9,7 +9,7 @@ function App(){
         <BrowserRouter>
             <Switch>
                 <Route exact path="/" component={Badges}/>
-                <Route exact path="/badges/" component={BadgeNew}/>
+                <Route exact path="/badges" component={BadgeNew}/>
             </Switch>
         </BrowserRouter>
     )

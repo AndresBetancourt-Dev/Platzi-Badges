@@ -1,6 +1,6 @@
 import React from 'react'; //Importing the React library from the node_modules
 import './styles/Badge.css'; //Importing stylings from this directory named styles
-import confLogo from '../images/badge-header.svg'; //Importing an svg from the parent directory that's allocated in a folder called images
+ //Importing an svg from the parent directory that's allocated in a folder called images
 
 //I create an object (that now it's going to be called a React Component) called Badge that Extends React Component object
 class Badge extends React.Component{
@@ -12,7 +12,7 @@ class Badge extends React.Component{
             //It's because i already used the reserved word class when creating my React Component
             <div className="Badge">
                 <div className="Badge__header">
-                    <img src={confLogo} alt="Logo de la Conferencia" /> 
+                    <img src="../assets/images/badge-header.svg" alt="Logo de la Conferencia" /> 
                 </div>
 
                 <div className="Badge__section-name">

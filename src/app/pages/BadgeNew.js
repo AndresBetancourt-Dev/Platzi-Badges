@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar';
 import Badge from '../components/Badge';
 import BadgeForm from '../components/BadgeForm';
 import './styles/BadgeNew.css';
-import logo from '../images/platziconf-logo.svg'
 
 
 class BadgeNew extends React.Component{
@@ -41,7 +40,7 @@ class BadgeNew extends React.Component{
             <div>
             <Navbar/>
             <div className="BadgeNew__hero d-flex justify-content-center">
-                <img className="img-fluid" alt="Logo" src={logo}/>
+                <img className="img-fluid" alt="Logo" src="../assets/images/platziconf-logo.svg"/>
             </div>
             <div className="container">
                 <div className="row">
@@ -53,7 +52,7 @@ class BadgeNew extends React.Component{
                         jobTitle={this.state.form.jobTitle}
                         twitter={this.state.form.twitter}/>
                     </div>
-                    <div className="col-12 col-md-6 mt-5">
+                    <div className="col-12 col-md-6">
                     <BadgeForm onChange={this.handleChange} formValues={this.state.form}/>
                     </div>
                 </div>
