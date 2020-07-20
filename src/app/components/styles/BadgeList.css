@@ -33,6 +33,4 @@
     height: 50%;
 }
 
-.BadgeList__item--details p:nth-of-type(2)::before{
-    content: 'Hello';
-}
+

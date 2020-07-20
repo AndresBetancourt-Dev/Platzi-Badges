@@ -37,8 +37,7 @@ class BadgeNew extends React.Component{
 
     render(){
         return(
-            <div>
-            <Navbar/>
+            <React.Fragment>
             <div className="BadgeNew__hero d-flex justify-content-center">
                 <img className="img-fluid" alt="Logo" src="../assets/images/platziconf-logo.svg"/>
             </div>
@@ -58,7 +57,7 @@ class BadgeNew extends React.Component{
                 </div>
             </div>
            
-            </div>
+            </React.Fragment>
         )
         //Here i'm returning an Component
         //That it's using three components Badge, BadgeForm and Navbar

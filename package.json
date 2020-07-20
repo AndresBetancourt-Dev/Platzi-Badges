@@ -10,11 +10,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "webpack": "webpack --mode development"
+    "webpack": "webpack --mode development --watch"
   },
   "dependencies": {
+    "@babel/runtime": "^7.10.5",
     "all": "0.0.0",
     "bootstrap": "^4.5.0",
+    "core-js": "^3.6.5",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
     "mongoose": "^5.9.22",
@@ -28,6 +30,7 @@
   "devDependencies": {
     "@babel/core": "^7.10.4",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "@svgr/webpack": "^5.4.0",

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './styles/BadgeList.css';
 
 class BadgesListItem extends React.Component{
@@ -20,18 +21,27 @@ class BadgesListItem extends React.Component{
 }
 
 class BadgesList extends React.Component{
+    
     render(){
+        if(this.props.badges.length === 0){
+            return (
+                <div>
+                    <h3 className="text-center text-success p-5">We didn't Found a Badge</h3>
+                    <Link to="/badges/new" className="w-100 btn btn-success">Create a Badge</Link>
+                </div>
+            )
+        }
         return(
             <div className="Badge__list">
                 <div className="Badges__container">
                      <ul className="list-unstyled">
                     {this.props.badges.map((badge)=>{
                         return (
-                        <li key={badge.id}>
+                        <li key={badge._id}>
                             <BadgesListItem badge={badge}/>
                         </li>
                         )
-                        })}; 
+                        })} 
                      </ul>
                 </div>
             </div>

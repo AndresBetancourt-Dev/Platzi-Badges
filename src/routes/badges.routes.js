@@ -13,15 +13,15 @@ router.get('/:id',async (req,res)=>{
 });
 
 router.post('/',async (req,res)=>{
-        const {firstName , lastName , jobTitle , twitter} = req.body;
-        const badge = new Badge({firstName,lastName,jobTitle,twitter});
+        const {firstName , lastName , jobTitle , twitter, avatarUrl, email} = req.body;
+        const badge = new Badge({firstName,lastName,jobTitle,twitter,email,avatarUrl});
         await badge.save();
         res.json({status : "Added"})
 });
 
 router.put('/:id',async (req,res)=>{
-        const {firstName , lastName , jobTitle , twitter} = req.body;
-        const newBadge = {firstName , lastName , jobTitle , twitter};
+        const {firstName , lastName , jobTitle , twitter,email,avatarUrl} = req.body;
+        const newBadge = {firstName , lastName , jobTitle , twitter,email , avatarUrl};
         await Badge.findByIdAndUpdate(req.params.id,newBadge);
         res.json({status : "Updated"});
 });
