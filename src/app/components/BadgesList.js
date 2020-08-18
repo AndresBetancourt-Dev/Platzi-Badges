@@ -1,13 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './styles/BadgeList.css';
+import Gravatar from './Gravatar'
 
 class BadgesListItem extends React.Component{
     render(){
         return(
             <div className="BadgeList__item">
                     <div className="BadgeList__item--img">
-                         <img src={this.props.badge.avatarUrl} alt="Badge Avatar"></img>
+                         <Gravatar email={this.props.badge.email} />
                     </div>
                     <div className="BadgeList__item--details">
                         <div className="font-weight-bold">{this.props.badge.firstName} {this.props.badge.lastName}</div>
@@ -20,10 +21,11 @@ class BadgesListItem extends React.Component{
     }
 }
 
-class BadgesList extends React.Component{
+function BadgesList(props){
+        const badges = props.badges;
     
-    render(){
-        if(this.props.badges.length === 0){
+    
+        if(badges.length === 0){
             return (
                 <div>
                     <h3 className="text-center text-success p-5">We didn't Found a Badge</h3>
@@ -33,12 +35,19 @@ class BadgesList extends React.Component{
         }
         return(
             <div className="Badge__list">
+                <div className="form-group">
+                    <label>Filter Badges</label>
+                    <input type="text" className="form-control"></input>
+                </div>
                 <div className="Badges__container">
                      <ul className="list-unstyled">
-                    {this.props.badges.map((badge)=>{
+                    {badges.map((badge)=>{
                         return (
                         <li key={badge._id}>
+                            <Link className="text-reset text-decoration-none" to={`/badges/${badge._id}`}>
                             <BadgesListItem badge={badge}/>
+                            </Link>
+                            
                         </li>
                         )
                         })} 
@@ -46,7 +55,7 @@ class BadgesList extends React.Component{
                 </div>
             </div>
         )
-    }
+    
 }
 
 export default BadgesList;

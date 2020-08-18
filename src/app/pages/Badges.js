@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import BadgesList from '../components/BadgesList';
 import PageLoading from '../components/PageLoading';
+import MiniLoader from '../components/MiniLoader';
 import './styles/Badges.css'
 import { Link } from 'react-router-dom';
 import PageError from '../components/PageError';
@@ -21,9 +22,9 @@ class Badges extends React.Component{
 
 
     componentDidMount(){
-        setTimeout(()=>{
+        this.intervalId = setInterval(()=>{
             this.fetchData() 
-        },1500) 
+        },5000) 
     }
 
     fetchData = async () =>{
@@ -38,6 +39,7 @@ class Badges extends React.Component{
     }
 
     componentWillUnmount(){
+        clearInterval(this.intervalId)
     }
 
     componentDidUpdate(prevProps,prevState){
@@ -58,7 +60,7 @@ class Badges extends React.Component{
 
     
     render(){
-            if(this.state.loading === true){
+            if(this.state.loading === true && !this.thereIsData()){
                 return (
                     <PageLoading/>
                 )
@@ -74,6 +76,7 @@ class Badges extends React.Component{
                             </div>
                         </div>
                         <div className="Badges__container">
+                            {this.state.loading && <MiniLoader/>}
                             <div className="Badges__buttons">
                                 {this.addBadgeButton()}
                             </div>
